@@ -1,46 +1,136 @@
 # Tanda Doloreña
 
-Aplicación de Flutter para llevar el control de una tanda. Guarda participantes, aportaciones, rondas y turnos.
+Aplicación para controlar participantes, aportaciones, rondas, turnos y cierre de una tanda.
 
-## Cómo ejecutarlo
+## Cómo ejecutar
 
-```bash
-flutter pub get
-flutter run
-```
+1. Instalar las dependencias con `flutter pub get`.
+2. Ejecutar las pruebas con `flutter test`.
+3. Abrir la aplicación con `flutter run`.
 
-Para ejecutar las pruebas:
+## Trabajo con TDD
 
-```bash
-flutter test
-```
+En cada fase se siguió el ciclo rojo y verde. La captura roja muestra el error real producido antes de completar el código faltante. La captura verde muestra en Visual Studio Code el código usado para resolver esa fase.
 
-## Todas las pruebas
-
-Se ejecutaron las siguientes 13 pruebas:
-
-1. Una aportación válida se agrega a la ronda actual.
-2. Una persona no puede aportar dos veces en la misma ronda.
-3. Una persona que no pertenece a la tanda no puede aportar.
-4. La ronda no puede cerrarse si falta una aportación.
-5. La ronda puede cerrarse cuando todos aportaron.
-6. Cerrar la ronda entrega el turno y avanza a la siguiente.
-7. No se puede cerrar si algún participante no ha aportado.
-8. La tanda no termina mientras queden turnos pendientes.
-9. La tanda termina cuando todos recibieron su turno.
-10. No se puede aportar después de terminar la tanda.
-11. No se puede cerrar una ronda después de terminar la tanda.
-12. El cambio interno del código conserva las reglas de aportación.
-13. Tres participantes pueden completar una tanda completa.
-
-Resultado final: **13 pruebas aprobadas**.
-
-## Capturas reales de las pruebas
+## Fase 1. Registrar una aportación válida
 
 ### Fase roja
 
-![Error real en la terminal de VS Code](capturas/tdd_rojo_error.png)
+En esta parte la prueba todavía falla porque falta implementar el código de la fase.
+
+![Error de la fase 1](capturas/fases/fase_01_roja.png)
 
 ### Fase verde
 
-![13 pruebas aprobadas en la terminal de VS Code](capturas/pruebas_vscode.png)
+Después se agrega el código necesario para resolver la prueba y continuar con el proyecto.
+
+![Código de la fase 1](capturas/fases/fase_01_verde.png)
+
+## Fase 2. Rechazar una aportación repetida
+
+### Fase roja
+
+En esta parte la prueba todavía falla porque falta implementar el código de la fase.
+
+![Error de la fase 2](capturas/fases/fase_02_roja.png)
+
+### Fase verde
+
+Después se agrega el código necesario para resolver la prueba y continuar con el proyecto.
+
+![Código de la fase 2](capturas/fases/fase_02_verde.png)
+
+## Fase 3. Rechazar a quien no participa
+
+### Fase roja
+
+En esta parte la prueba todavía falla porque falta implementar el código de la fase.
+
+![Error de la fase 3](capturas/fases/fase_03_roja.png)
+
+### Fase verde
+
+Después se agrega el código necesario para resolver la prueba y continuar con el proyecto.
+
+![Código de la fase 3](capturas/fases/fase_03_verde.png)
+
+## Fase 4. Detectar cuándo todos aportaron
+
+### Fase roja
+
+En esta parte la prueba todavía falla porque falta implementar el código de la fase.
+
+![Error de la fase 4](capturas/fases/fase_04_roja.png)
+
+### Fase verde
+
+Después se agrega el código necesario para resolver la prueba y continuar con el proyecto.
+
+![Código de la fase 4](capturas/fases/fase_04_verde.png)
+
+## Fase 5. Cerrar la ronda y entregar turno
+
+### Fase roja
+
+En esta parte la prueba todavía falla porque falta implementar el código de la fase.
+
+![Error de la fase 5](capturas/fases/fase_05_roja.png)
+
+### Fase verde
+
+Después se agrega el código necesario para resolver la prueba y continuar con el proyecto.
+
+![Código de la fase 5](capturas/fases/fase_05_verde.png)
+
+## Fase 6. No cerrar si faltan aportaciones
+
+### Fase roja
+
+En esta parte la prueba todavía falla porque falta implementar el código de la fase.
+
+![Error de la fase 6](capturas/fases/fase_06_roja.png)
+
+### Fase verde
+
+Después se agrega el código necesario para resolver la prueba y continuar con el proyecto.
+
+![Código de la fase 6](capturas/fases/fase_06_verde.png)
+
+## Fase 7. Detectar que la tanda terminó
+
+### Fase roja
+
+En esta parte la prueba todavía falla porque falta implementar el código de la fase.
+
+![Error de la fase 7](capturas/fases/fase_07_roja.png)
+
+### Fase verde
+
+Después se agrega el código necesario para resolver la prueba y continuar con el proyecto.
+
+![Código de la fase 7](capturas/fases/fase_07_verde.png)
+
+## Fase 8. Refactor de reglas de negocio
+
+### Fase roja
+
+En esta parte la prueba todavía falla porque falta implementar el código de la fase.
+
+![Error de la fase 8](capturas/fases/fase_08_roja.png)
+
+### Fase verde
+
+Después se agrega el código necesario para resolver la prueba y continuar con el proyecto.
+
+![Código de la fase 8](capturas/fases/fase_08_verde.png)
+
+## Aplicación completa
+
+Esta es la aplicación ejecutándose después de terminar las fases.
+
+![Aplicación completa](capturas/app_final.png)
+
+## Resultado
+
+Las fases quedaron documentadas una por una. Cada fase conserva su evidencia roja y verde, y al final se muestra el resultado completo de la aplicación.
+
