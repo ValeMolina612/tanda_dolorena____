@@ -1,25 +1,42 @@
-# tanda_dolorena
+# Tanda Doloreña
 
-Aplicación Flutter para administrar una tanda dolorense mediante reglas de negocio desarrolladas con TDD.
+Aplicación de Flutter para llevar el control de una tanda. Guarda participantes, aportaciones, rondas y turnos.
 
-## Ejecutar
+## Cómo ejecutarlo
 
 ```bash
 flutter pub get
-flutter test
 flutter run
 ```
 
-Las rondas del proceso TDD están documentadas en [ETAPAS.md](ETAPAS.md).
+Para ejecutar las pruebas:
 
-## Evidencia de pruebas
+```bash
+flutter test
+```
 
-La suite comprueba aportaciones, participantes, cierre de rondas, turnos y finalización de la tanda. Resultado: **13 pruebas aprobadas**.
+## Todas las pruebas
 
-### Ciclo TDD: rojo a verde
+Se ejecutaron las siguientes 13 pruebas:
 
-Ambas capturas fueron tomadas de ejecuciones reales en la terminal integrada de Visual Studio Code: la fase roja muestra `undefined_function` por código aún no implementado y la fase verde muestra la suite final aprobada.
+1. Una aportación válida se agrega a la ronda actual.
+2. Una persona no puede aportar dos veces en la misma ronda.
+3. Una persona que no pertenece a la tanda no puede aportar.
+4. La ronda no puede cerrarse si falta una aportación.
+5. La ronda puede cerrarse cuando todos aportaron.
+6. Cerrar la ronda entrega el turno y avanza a la siguiente.
+7. No se puede cerrar si algún participante no ha aportado.
+8. La tanda no termina mientras queden turnos pendientes.
+9. La tanda termina cuando todos recibieron su turno.
+10. No se puede aportar después de terminar la tanda.
+11. No se puede cerrar una ronda después de terminar la tanda.
+12. El cambio interno del código conserva las reglas de aportación.
+13. Tres participantes pueden completar una tanda completa.
 
-| 🔴 Prueba que solicita código faltante | 🟢 Implementación terminada |
+Resultado final: **13 pruebas aprobadas**.
+
+## Capturas reales de las pruebas
+
+| Fase roja | Fase verde |
 |---|---|
-| ![Error real por código faltante en la terminal de VS Code](capturas/tdd_rojo_error.png) | ![Pruebas aprobadas en la terminal de VS Code](capturas/pruebas_vscode.png) |
+| ![Error real en la terminal de VS Code](capturas/tdd_rojo_error.png) | ![13 pruebas aprobadas en la terminal de VS Code](capturas/pruebas_vscode.png) |
